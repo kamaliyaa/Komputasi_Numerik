@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://kamaliyaa.github.io/</loc>
-     <lastmod>2019-09-19</lastmod>
+     <lastmod>2019-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/Statistik Dekriptif/</loc>
-     <lastmod>2019-09-19</lastmod>
+     <lastmod>2019-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/Mengukur Jarak/</loc>
-     <lastmod>2019-09-19</lastmod>
+     <lastmod>2019-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://kamaliyaa.github.io/missing value/</loc>
+     <lastmod>2019-10-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kamaliyaa.github.io/pohon keputusan/</loc>
+     <lastmod>2019-10-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
