@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://kamaliyaa.github.io/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/Statistik Dekriptif/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/Mengukur Jarak/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/missing value/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/pohon keputusan/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/clus/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://kamaliyaa.github.io/fuzzy clustering/</loc>
-     <lastmod>2019-11-14</lastmod>
+     <lastmod>2019-11-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://kamaliyaa.github.io/Regresi Linier Sederhana dan Berganda/</loc>
+     <lastmod>2019-11-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
