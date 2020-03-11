@@ -377,6 +377,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mencari%20akar/" title="mencari akar" class="md-nav__link">
+      mencari akar
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -534,25 +546,17 @@
                 <h1 id="error-dalam-komputasi-numerik"><strong>ERROR DALAM KOMPUTASI NUMERIK</strong><a class="headerlink" href="#error-dalam-komputasi-numerik" title="Permanent link">&para;</a></h1>
 <h3 id="error">ERROR<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>*Komputasi numerik bisa di artikan dengan penentuan eror suatu perhitungan agar bisa mencapai nilai akurasi. eror ini ialah nilai yang disebabkan nilai menjadi tidak tepat.</p>
+<p>Komputasi numerik bisa di artikan dengan penentuan eror suatu perhitungan agar bisa mencapai nilai akurasi. eror ini ialah nilai yang disebabkan nilai menjadi tidak tepat.</p>
 </blockquote>
 <h3 id="penyebab-terjadinya-error">Penyebab Terjadinya Error<a class="headerlink" href="#penyebab-terjadinya-error" title="Permanent link">&para;</a></h3>
 <p>Error dapat terjadi karena beberapa kesalahan. Berikut ini penjelasan mengenai ketiga sumber kesalahan dalam komputasi numerik.</p>
 <p><strong>Round off errors</strong></p>
-<p>Kesalahan jenis ini terjadi akibat proses pembulatan dalam perhitungan. Secara umum, proses pembulatan ada 2 aturan yaitu :</p>
-<ul>
-<li>
-<p>Jika digit yang dibulatkan kurang dari 5, maka tidak terjadi pembulatan.</p>
-</li>
-<li>
-<p>Sebaliknya, jika lebih dari 5, maka terjadi pembulatan yaitu dengan menambah satu.</p>
-</li>
-</ul>
+<p>Kesalahan jenis ini terjadi akibat proses pembulatan dalam perhitungan. Secara umum, proses pembulatan ada 2 aturan yaitu Jika digit yang dibulatkan kurang dari 5, maka tidak terjadi pembulatan. Sebaliknya, jika lebih dari 5, maka terjadi pembulatan yaitu dengan menambah satu.</p>
 <p><strong>Truncation errors</strong></p>
 <p>Truncation errors adalah kesalahan yang dilakukan dengan memotong jumlah tak hingga dan memperkirakannya dengan jumlah terbatas.</p>
-<p><img alt="" src="D:\SEMESTER 4\Komputasi Numerik\templatesite\templatesite\docs\truncation-error.png" /></p>
-<p><img alt="" src="D:\SEMESTER 4\Komputasi Numerik\templatesite\templatesite\docs\picture1.png" /></p>
-<p><img alt="" src="D:\SEMESTER 4\Komputasi Numerik\templatesite\templatesite\docs\picture2.png" /></p>
+<p><img alt="" src="../truncation-error.png" /></p>
+<p><img alt="" src="../picture1.png" /></p>
+<p><img alt="" src="../picture2.png" /></p>
 <p><strong>Inherent errors</strong></p>
 <p>Terjadi akibat kekeliruan dalam menyalin data, salah membaca skala atau kesalahan karena kurangnya pengertian mengenai hukum-hukum fisik dari data yang diukur. Kesalahan ini sering terjadi karena faktor human error</p>
 <h1 id="deret-maclaurin"><strong>DERET MACLAURIN</strong><a class="headerlink" href="#deret-maclaurin" title="Permanent link">&para;</a></h1>
@@ -571,55 +575,72 @@
 <p>Untuk membuat program agar dapat mengekspansi bilangan e<sup>2x</sup> dengan nilai x=4 hingga nilai menjadi kurang dari 0,001 bisa dibuat dengan listing program sebagai berikut.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 
-<span class="n">x</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;masukan nilai x=&quot;</span><span class="p">))</span>
 <span class="n">cek</span> <span class="o">=</span><span class="mi">1</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">b</span><span class="o">=</span><span class="mi">1</span>
-<span class="nb">iter</span> <span class="o">=</span> <span class="mi">1</span>
-
 <span class="k">while</span> <span class="n">cek</span><span class="o">&gt;</span><span class="mf">0.001</span><span class="p">:</span>
     <span class="n">f_x</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">f_y</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-        <span class="n">f_x</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">f_x</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-        <span class="n">f_y</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">j</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">f_y</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">j</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;suku ke&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="n">f_x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;suku ke&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="n">f_y</span><span class="p">)</span>
+
     <span class="n">cek</span> <span class="o">=</span> <span class="n">f_y</span><span class="o">-</span><span class="n">f_x</span>
     <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
     <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iterasi ke-&quot;</span><span class="p">,</span><span class="nb">iter</span><span class="p">,</span><span class="s2">&quot;= &quot;</span><span class="p">,</span><span class="n">cek</span><span class="p">)</span>
-    <span class="nb">iter</span><span class="o">+=</span><span class="mi">1</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil selisih =&quot;</span><span class="p">,</span><span class="n">cek</span><span class="p">)</span>
 </code></pre></div>
 
 
 <p>dan berikut hasil output nya :</p>
-<div class="codehilite"><pre><span></span><code><span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">1</span> <span class="o">=</span>  <span class="mf">1.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">2</span> <span class="o">=</span>  <span class="mf">8.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">3</span> <span class="o">=</span>  <span class="mf">32.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">4</span> <span class="o">=</span>  <span class="mf">85.33333333333333</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">5</span> <span class="o">=</span>  <span class="mf">170.66666666666669</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">6</span> <span class="o">=</span>  <span class="mf">273.0666666666666</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">7</span> <span class="o">=</span>  <span class="mf">364.08888888888896</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">8</span> <span class="o">=</span>  <span class="mf">416.1015873015872</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">9</span> <span class="o">=</span>  <span class="mf">416.1015873015872</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">10</span> <span class="o">=</span>  <span class="mf">369.8680776014112</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">11</span> <span class="o">=</span>  <span class="mf">295.89446208112895</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">12</span> <span class="o">=</span>  <span class="mf">215.195972422639</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">13</span> <span class="o">=</span>  <span class="mf">143.46398161509296</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">14</span> <span class="o">=</span>  <span class="mf">88.28552714774924</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">15</span> <span class="o">=</span>  <span class="mf">50.448872655856576</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">16</span> <span class="o">=</span>  <span class="mf">26.90606541645684</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">17</span> <span class="o">=</span>  <span class="mf">13.45303270822842</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">18</span> <span class="o">=</span>  <span class="mf">6.330838921519444</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">19</span> <span class="o">=</span>  <span class="mf">2.8137061873417224</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">20</span> <span class="o">=</span>  <span class="mf">1.184718394670199</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">21</span> <span class="o">=</span>  <span class="mf">0.47388735786807956</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">22</span> <span class="o">=</span>  <span class="mf">0.18052851728316455</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">23</span> <span class="o">=</span>  <span class="mf">0.06564673355751438</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">24</span> <span class="o">=</span>  <span class="mf">0.022833646454728296</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">25</span> <span class="o">=</span>  <span class="mf">0.0076112154847578495</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">26</span> <span class="o">=</span>  <span class="mf">0.0024355889549951826</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">27</span> <span class="o">=</span>  <span class="mf">0.0007494119863622473</span>
+<div class="codehilite"><pre><span></span><code><span class="n">masukan</span> <span class="n">nilai</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">8.5</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">8.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">13.0</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">13.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">5</span> <span class="o">=</span> <span class="mf">16.375</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">3.375</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">5</span> <span class="o">=</span> <span class="mf">16.375</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">6</span> <span class="o">=</span> <span class="mf">18.4</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">2.0249999999999986</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">6</span> <span class="o">=</span> <span class="mf">18.4</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">7</span> <span class="o">=</span> <span class="mf">19.412499999999998</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">1.0124999999999993</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">7</span> <span class="o">=</span> <span class="mf">19.412499999999998</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">8</span> <span class="o">=</span> <span class="mf">19.846428571428568</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.4339285714285701</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">8</span> <span class="o">=</span> <span class="mf">19.846428571428568</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">9</span> <span class="o">=</span> <span class="mf">20.009151785714284</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.162723214285716</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">9</span> <span class="o">=</span> <span class="mf">20.009151785714284</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">10</span> <span class="o">=</span> <span class="mf">20.063392857142855</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.05424107142857082</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">10</span> <span class="o">=</span> <span class="mf">20.063392857142855</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">11</span> <span class="o">=</span> <span class="mf">20.079665178571425</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.016272321428569825</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">11</span> <span class="o">=</span> <span class="mf">20.079665178571425</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">12</span> <span class="o">=</span> <span class="mf">20.08410308441558</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.004437905844156376</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">12</span> <span class="o">=</span> <span class="mf">20.08410308441558</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">13</span> <span class="o">=</span> <span class="mf">20.08521256087662</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.001109476461039094</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">13</span> <span class="o">=</span> <span class="mf">20.08521256087662</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">14</span> <span class="o">=</span> <span class="mf">20.08546859390609</span>
+<span class="n">hasil</span> <span class="n">selisih</span> <span class="o">=</span> <span class="mf">0.0002560330294691937</span>
 </code></pre></div>
                 
                   
@@ -657,13 +678,13 @@
           </a>
         
         
-          <a href="../Statistik%20Dekriptif/" title="statistik deskriptif" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mencari%20akar/" title="mencari akar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                statistik deskriptif
+                mencari akar
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
