@@ -403,6 +403,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gauss/" title="Gauss" class="md-nav__link">
+      Gauss
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -576,28 +588,7 @@
 <h3 id="1-metode-bisection"><strong>1. Metode Bisection</strong><a class="headerlink" href="#1-metode-bisection" title="Permanent link">&para;</a></h3>
 <p>Metode bagi dua (Bisection) disebut juga pemotongan biner (binary chopping), metode pembagian dua (interval halving). Prinsip metode bagi dua adalah mengurung akar fungsi pada interval [a,b]. Selanjutnya interval tersebut terus menerus dibagi dua hingga sekecil mungkin, sehingga nilai hampiran yang dicari dapat ditentukan dengan tingkat akurasi tertentu. Menentuka selang [a,b] sehingga f(a).f(b) &lt; 0. Pada setiap kali lelaran, selang [a,b] kita bagi dua di x=c, sehingga terdapat dua buah upaselang yang berukuran sama, yaitu [a,c] dan [c,b]. selang yang diambil untuk lelaran berikutnya adalah upaselang yang memuat akat, tergantung pada apakah f(a). f(c)&lt; 0 atau f(c)f(b) &lt; 0.</p>
 <p>Selang yang baru dibagu dua lagi dengan cara yang samaa. Begituseterusnya sampai ukuran selang yang baru sudah sangat kecil. Kondisiberhenti lelaran dapat dipilih salah satu dari tiga kriteria berikut:</p>
-<ol>
-<li>Lebar selang baru  [b-c] &lt; , yang dalam hal ini adalah</li>
-</ol>
-<p> </p>
-<p>nilaitoleransi lebar selang yang menurung akar2.</p>
-<p>Nilai fungsi hampiran akar</p>
-<p><em>f</em> </p>
-<p>(</p>
-<p><em>c</em></p>
-<p>)=0 beberapa bahasan pemrogramanmembolehkan pembandingan dua buah bilangan real, sehinggaperbandingan</p>
-<p><em>f</em> </p>
-<p>(</p>
-<p><em>c</em></p>
-<p>)=03.</p>
-<p>Galat relative hampiran akar</p>
-<p>  </p>
-<p></p>
-<p><em>baru</em><em>lama</em><em>baru</em></p>
-<p><em>C</em> <em>C</em> <em>C</em> </p>
-<p>yang dalam ini</p>
-<p>  </p>
-<p>adalah galat relatif hampiran yang diinginkan</p>
+<p><img alt="" src="../1.1.PNG" /></p>
 <p>Bisection adalah algoritma pencarian akar pada sebuah interval. Interval tersebut membagi dua bagian, lalu memilih dari dua bagian ini dipilih bagian mana yang mengandung akar dan bagian yang tidak mengandung akar dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh akar 
 persamaan atau mendekati akar persamaan. Metode ini berlaku ketika ingin memecahkan persamaan <em>f</em>(<em>x</em>) = 0 dengan <em>f</em> merupakan fungsi kontinyu.</p>
 <p><img alt="" src="../bisection.jpg" /></p>
@@ -776,36 +767,40 @@ m = X2</p>
 <p><em>f</em>(X0) * <em>f</em>(X2) &gt; 0 Maka akar pada [X2, X1], X2 = X0</p>
 <p>4) Pengulangan / iterasi mencari X2 dan interval baru dilakukan berdasarkan nilai toleransi | (X2 - X)1 / X1 | atau | (X2 - X0) / X0 |</p>
 <p>5) Kelemahan : Hanya salah satu ujung titik interval ( X0 atau X1 ) yang bergerak menuju akar dan yang lain selalu tetap untuk setiap iterasi [ nilai bersifat mutlak ]</p>
-<div class="codehilite"><pre><span></span><code>error = 0.01
-a = 0
-b = 2.1
+<div class="codehilite"><pre><span></span><code><span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">2.1</span>
 
-def f(x):
-    return x**2 - 5*x + 6
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
 
-def regulasi_falsi(a,b):
-    i=0
-    max_iter = 50
-    iteration = True
-    while iteration and i &lt; max_iter:
-        if f(a)*f(b) &lt; 0:
-            x = (a*abs(f(b)) + b*abs(f(a))) / (abs(f(a)) + abs(f(b)))
-            if f(a)*f(x) &lt; 0:
-                b = x
-                print(x)
-            if f(x)*f(b) &lt; 0:
-                a = x
-                print(x)
-            if abs(a-b) &lt; error:
-                iteration = False
-            else:
-                i+=1
-        else:
-            print(&#39;tidak di temukan akar&#39;)
-    print(&#39;x =&#39;, x)
+<span class="k">def</span> <span class="nf">regulasi_falsi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">iteration</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">while</span> <span class="n">iteration</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max_iter</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">x</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">error</span><span class="p">:</span>
+                <span class="n">iteration</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tidak di temukan akar&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
 
-regulasi_falsi(a,b)
+<span class="n">regulasi_falsi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
 
@@ -896,35 +891,39 @@ regulasi_falsi(a,b)
 <p>Akar persamaan adalah nilai x yang terakhir.</p>
 </li>
 </ol>
-<p>```pyt
-   def secant(f,a,b,N):
-       if f(a)<em>f(b) &gt;= 0:
-           print("Secant method fails.")
-           return None
-       a_n = a
-       b_n = b
-       for n in range(1,N+1):
-           m_n = a_n - f(a_n)</em>(b_n - a_n)/(f(b_n) - f(a_n))
-           f_m_n = f(m_n)
-           if f(a_n)<em>f_m_n &lt; 0:
-               a_n = a_n
-               b_n = m_n
-           elif f(b_n)</em>f_m_n &lt; 0:
-               a_n = m_n
-               b_n = b_n
-           elif f_m_n == 0:
-               print("Found exact solution.")
-               return m_n
-           else:
-               print("Secant method fails.")
-               return None
-       return a_n - f(a_n)*(b_n - a_n)/(f(b_n) - f(a_n))</p>
-<p>p = lambda x: x*<em>2 - 5</em>x + 6
-   print(p(1))
-   print(p(2))
-   approx = secant(p,1,2.5,25)
-   print(approx)</p>
+<p>```pyt</p>
 <p>```</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">secant</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Secant method fails.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">a_n</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">b_n</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">m_n</span> <span class="o">=</span> <span class="n">a_n</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b_n</span> <span class="o">-</span> <span class="n">a_n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">))</span>
+        <span class="n">f_m_n</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">m_n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">a_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">m_n</span>
+        <span class="k">elif</span> <span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">m_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">b_n</span>
+        <span class="k">elif</span> <span class="n">f_m_n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found exact solution.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">m_n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Secant method fails.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">a_n</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b_n</span> <span class="o">-</span> <span class="n">a_n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">))</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">approx</span> <span class="o">=</span> <span class="n">secant</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">approx</span><span class="p">)</span>
+</code></pre></div>
+
+
 <div class="codehilite"><pre><span></span><code>Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license()&quot; for more information.
 &gt;&gt;&gt; 
@@ -970,13 +969,13 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
           </a>
         
         
-          <a href="../Statistik%20Dekriptif/" title="statistik deskriptif" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Gauss/" title="Gauss" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                statistik deskriptif
+                Gauss
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
